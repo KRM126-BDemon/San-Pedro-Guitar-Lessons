@@ -8,7 +8,7 @@ A professional static website for guitar lesson services, built to demonstrate A
 - HTML5 UP Dimension template
 - AWS S3
 - AWS CloudFront
-- AWS Lambda + API Gateway for contact form (planned)
+- AWS Lambda + API Gateway for contact form
 
 ## Architecture
 - Static files hosted in S3 bucket configured for website hosting
@@ -32,16 +32,22 @@ A professional static website for guitar lesson services, built to demonstrate A
 - S3 endpoint: http://sanpedroguitar.s3-website-us-west-1.amazonaws.com
 - CloudFront (CDN): https://d21yj99qybpbhg.cloudfront.net
 
+## Challenges & Solutions
+
+**CloudFront Timeout Issue**
+- Problem: CloudFront URL was timing out/hanging
+- Cause: Default root object was not configured
+- Solution: Added `index.html` as default root object in CloudFront general settings
+- Learning: CloudFront needs explicit configuration to serve index files at root paths
+
 ## Project Status
 ✅ Local development complete
 ✅ Deployed to S3
 ✅ CloudFront CDN configured
-⏳ Contact form integration (in progress)
+- [x] Contact form integration
 ⏳ Custom domain setup (planned)
 
 ## Next Steps
-- Implement Lambda function for contact form processing
-- Configure Amazon SES for email delivery
 - Set up custom domain via Route 53
 - Add SSL certificate for custom domain
 
