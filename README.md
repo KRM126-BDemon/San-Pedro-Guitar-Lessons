@@ -17,8 +17,8 @@ A professional static website for guitar lesson services, built to demonstrate A
 ## Architecture
 - Static files hosted in S3 bucket configured for website hosting
 - CloudFront distribution for global content delivery and HTTPS
-- Lambda + API Gateway for contact form (planned)
-- Route 53 for custom domain (planned)
+- Lambda + API Gateway for contact form
+- Route 53 for custom domain
 - [Configuration & Website Images] San Pedro Guitar Screenshots - Portfolio
 
 ### S3 Configuration
